@@ -9,7 +9,7 @@ report = wr.Report(
             'To learn more, check out the action ',
             wr.Link(
                 "on the github marketplace",
-                link="https://github.com/marketplace/actions/generate-weights-biases-report"
+                url="https://github.com/marketplace/actions/generate-weights-biases-report"
             )
         ]),
         wr.H1("Here are some charts"),
