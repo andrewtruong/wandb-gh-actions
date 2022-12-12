@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Generate Weights & Biases Report
-      uses: andrewtruong/wandb_create_report_action@v0.05
+      uses: andrewtruong/wandb_create_report_action
       with:
         wandb_api_key: ${{ secrets.wandb_api_key }}
         report_template_filename: template.py
