@@ -26,5 +26,3 @@ report = wr.Report(
         wr.WeaveBlockArtifact("megatruong", "lineage-example", artifact="model-1", tab="lineage")
     ]
 ).save()
-
-print(report.url)

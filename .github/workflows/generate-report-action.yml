@@ -1,5 +1,5 @@
 name: Generate Report
-run-name: ${{ github.actor }} is generating a new report.
+run-name: ${{ github.actor }} is generating a new report
 on: [push]
 jobs:
   generate-report:
