@@ -6,4 +6,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Generate Weights & Biases Report
-      uses: andrewtruong/wandb_create_report_action@v0
+      uses: andrewtruong/wandb_create_report_action@v0.01
