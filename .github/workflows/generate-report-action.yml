@@ -1,8 +1,7 @@
-name: Generate Report Action
-run-name: ${{ github.actor }} is generating a new report.
+name: Generate Report
 on: [push]
 jobs:
-  Generate-Report:
+  generate-report:
     runs-on: ubuntu-latest
     steps:
     - name: Generate Weights & Biases Report
