@@ -1,11 +1,12 @@
 name: Generate Report
 run-name: ${{ github.actor }} is generating a new report
-on: [workflow_dispatch]
-inputs:
-  template-file:
-    description: "Report Template Python Script"
-    required: true
-    default: template.py
+on:
+  workflow_dispatch:
+    inputs:
+      template-file:
+        description: "Report Template Python Script"
+        required: true
+        default: template.py
 jobs:
   generate-report:
     runs-on: ubuntu-latest
