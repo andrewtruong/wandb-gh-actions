@@ -1,4 +1,4 @@
-name: Generate Report
+name: Start Launch Agent
 run-name: ${{ github.actor }} is starting a launch agent
 on: [push]
 jobs:
