@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Launch W&B Agent
-      uses: andrewtruong/wandb_create_report_action@v0.05
+      uses: andrewtruong/wandb-launch-agent@master
       with:
         wandb_api_key: ${{ secrets.wandb_api_key }}
         entity: megatruong
