@@ -1,0 +1,14 @@
+{
+  "folders": [
+	{
+		"path": "../.."
+	},
+	{
+		"path": "../../../wandb-launch-agent"
+	},
+	{
+		"path": "../../../launch-jobs"
+	}
+],
+  "settings": {}
+}
