@@ -2,8 +2,9 @@ name: Start Launch Agent
 run-name: ${{ github.actor }} is starting a launch agent
 on: [push]
 jobs:
-  generate-report:
+  run-launch-agent:
     runs-on: ubuntu-latest
+    timeout-minutes: 10  # better to add no-activity counter on agent?
     steps:
     - name: Launch W&B Agent
       uses: andrewtruong/wandb-launch-agent@master
