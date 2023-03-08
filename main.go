@@ -6,6 +6,11 @@ import (
 
 	"github.com/go-git/go-git/v5"
 	"github.com/go-git/go-git/v5/plumbing"
+	"github.com/go-git/go-git/v5/plumbing/transport/ssh"
+	"github.com/go-git/go-git/v5/plumbing/transport/ssh"
+	"github.com/go-git/go-git/v5/plumbing/transport/ssh"
+	"github.com/go-git/go-git/v5/plumbing/transport/ssh"
+	"github.com/go-git/go-git/v5/plumbing/transport/ssh"
 	cp "github.com/otiai10/copy"
 )
 
@@ -38,7 +43,30 @@ func main() {
 	checkErr(err)
 
 	// Push
+	auth, _ := ssh.NewSSHAgentAuth("git")
+	err = r.Push(&git.PushOptions{
+		Auth: auth,
+	})
 	err = r.Push(&git.PushOptions{})
+	auth, _ := ssh.NewSSHAgentAuth("git")
+	err = r.Push(&git.PushOptions{
+		Auth: auth,
+	})
+	err = r.Push(&git.PushOptions{})
+	auth, _ := ssh.NewSSHAgentAuth("git")
+	err = r.Push(&git.PushOptions{
+		Auth: auth,
+	})
+	err = r.Push(&git.PushOptions{})
+	auth, _ := ssh.NewSSHAgentAuth("git")
+	err = r.Push(&git.PushOptions{
+		Auth: auth,
+	})
+	err = r.Push(&git.PushOptions{})
+	auth, _ := ssh.NewSSHAgentAuth("git")
+	err = r.Push(&git.PushOptions{
+		Auth: auth,
+	})
 	checkErr(err)
 
 }
