@@ -2,17 +2,11 @@ package main
 
 import (
 	"log"
-	"log"
-	"log"
 	"os"
 	"path/filepath"
 
 	"github.com/go-git/go-git/v5"
 	"github.com/go-git/go-git/v5/plumbing"
-	"github.com/go-git/go-git/v5/plumbing/transport/http"
-	"github.com/go-git/go-git/v5/plumbing/transport/ssh"
-	"github.com/go-git/go-git/v5/plumbing/transport/http"
-	"github.com/go-git/go-git/v5/plumbing/transport/ssh"
 	"github.com/go-git/go-git/v5/plumbing/transport/http"
 	cp "github.com/otiai10/copy"
 )
@@ -47,19 +41,7 @@ func main() {
 
 	// Push
 	// auth, _ := ssh.NewSSHAgentAuth("git")
-	auth, _ := ssh.NewSSHAgentAuth("git")
-	// auth, _ := ssh.NewSSHAgentAuth("git")
-	auth, _ := ssh.NewSSHAgentAuth("git")
-	// auth, _ := ssh.NewSSHAgentAuth("git")
 	err = r.Push(&git.PushOptions{
-		Auth: &http.BasicAuth{
-			Username: "andrewtruong",
-			Password: os.Getenv("GITHUB_API_TOKEN")},
-		Auth: auth,
-		Auth: &http.BasicAuth{
-			Username: "andrewtruong",
-			Password: os.Getenv("GITHUB_API_TOKEN")},
-		Auth: auth,
 		Auth: &http.BasicAuth{
 			Username: "andrewtruong",
 			Password: os.Getenv("GITHUB_API_TOKEN")},
@@ -69,14 +51,6 @@ func main() {
 }
 func checkErr(err error) {
 	if err != nil {
-		log.Println("Error: ", err)
-		// panic(err)
-		// log.Fatal("Error: ", err)
-		panic(err)
-		log.Println("Error: ", err)
-		// panic(err)
-		// log.Fatal("Error: ", err)
-		panic(err)
 		log.Println("Error: ", err)
 		// panic(err)
 	}
