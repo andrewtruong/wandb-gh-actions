@@ -42,8 +42,9 @@ func main() {
 	// Push
 	// auth, _ := ssh.NewSSHAgentAuth("git")
 	err = r.Push(&git.PushOptions{
-		Auth: &http.TokenAuth{
-			Token: os.Getenv("GITHUB_API_TOKEN")},
+		Auth: &http.BasicAuth{
+			Username: "andrewtruong",
+			Password: os.Getenv("GITHUB_API_TOKEN")},
 	})
 	checkErr(err)
 
