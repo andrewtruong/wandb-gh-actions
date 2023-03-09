@@ -1,0 +1,14 @@
+name: Start Launch Agent
+run-name: ${{ github.actor }} is starting a launch agent
+on: [push, workflow_dispatch]
+jobs:
+  run-launch-agent:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2  # better to add no-activity counter on agent?
+    steps:
+    - name: Launch W&B Agent
+      uses: andrewtruong/wandb-launch-agent@master
+      with:
+        wandb_api_key: ${{ secrets.wandb_api_key }}
+        entity: megatruong
+        queue: example-local-process
