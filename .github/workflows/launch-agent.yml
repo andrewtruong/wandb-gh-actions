@@ -10,5 +10,7 @@ jobs:
       uses: andrewtruong/wandb-launch-agent@master
       with:
         wandb_api_key: ${{ secrets.wandb_api_key }}
+        entity: ${{ inputs.entity }}
+        queue: ${{ inputs.queue }}
 #         entity: megatruong
 #         queue: example-local-process
