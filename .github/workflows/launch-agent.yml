@@ -1,6 +1,12 @@
 name: Start Launch Agent
 run-name: ${{ github.actor }} is starting a launch agent
-on: [push, workflow_dispatch]
+on:
+  workflow_dispatch:
+    inputs:
+      entity:
+        required: true
+      queue:
+        required: true
 jobs:
   run-launch-agent:
     runs-on: ubuntu-latest
