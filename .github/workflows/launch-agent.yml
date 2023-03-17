@@ -10,6 +10,7 @@ on:
 jobs:
   run-launch-agent:
     runs-on: ubuntu-latest
+    container: ubuntu
     timeout-minutes: 2  # better to add no-activity counter on agent?
     steps:
     - name: Launch W&B Agent
