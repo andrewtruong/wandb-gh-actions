@@ -20,3 +20,5 @@ jobs:
         queue: ${{ inputs.queue }}
 #         entity: megatruong
 #         queue: example-local-process
+    env:
+      WANDB_BASE_URL: ${{ secrets.wandb_base_url }}
